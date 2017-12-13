@@ -40,7 +40,10 @@ function AntiPropSurf.NoCollide(ply,ent)
 		not ent:IsNPC()) then
 		
 		ent:SetCollisionGroup( COLLISION_GROUP_INTERACTIVE_DEBRIS )
-		ply:SetCollisionGroup( COLLISION_GROUP_INTERACTIVE_DEBRIS )		
+		ply:SetCollisionGroup( COLLISION_GROUP_INTERACTIVE_DEBRIS )	
+
+		ent:SetPos(ent:GetPos())
+		ply:SetPos(ply:GetPos())
 	end
 end
 
