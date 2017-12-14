@@ -1,5 +1,7 @@
 # GmodAntiSurf
 ![alt text](https://raw.githubusercontent.com/Team-Pixel/GmodAntiSurf/master/icon.jpg "Logo")
+
+---
 A simple anti propsurf on Garry's Mod.
 
 ## Convars
