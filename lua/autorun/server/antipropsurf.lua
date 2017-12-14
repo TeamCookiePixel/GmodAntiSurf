@@ -42,22 +42,27 @@ function AntiPropSurf.NoCollide(ply,ent)
 		ent:SetCollisionGroup( COLLISION_GROUP_INTERACTIVE_DEBRIS )
 		ply:SetCollisionGroup( COLLISION_GROUP_INTERACTIVE_DEBRIS )	
 
+		ply:GetPhysicsObject():SetMass(ply:GetPhysicsObject():GetMass() * 10)
+
 		ent:SetPos(ent:GetPos())
 		ply:SetPos(ply:GetPos())
 	end
 end
 
 function AntiPropSurf.Collide(ply,ent)
-	if(not ent:IsValid()) then return end
-	
-	if(not ent:IsPlayer() and
-		not ent:IsWeapon() and
-		not ent:IsNPC()) then
+	timer.Create("AntiPropSurf.Collide.Timeout", 0.25, 1, function() // We need a timeout to prevent some freeze exploits
+		if(not ent:IsValid()) then return end
 		
-		ent:SetCollisionGroup( COLLISION_GROUP_NONE )	
-	end
+		if(not ent:IsPlayer() and
+			not ent:IsWeapon() and
+			not ent:IsNPC()) then
+			
+			ply:GetPhysicsObject():SetMass(ply:GetPhysicsObject():GetMass() / 10)
+			ent:SetCollisionGroup( COLLISION_GROUP_NONE )	
+		end
 
-	ply:SetCollisionGroup( COLLISION_GROUP_PLAYER )
+		ply:SetCollisionGroup( COLLISION_GROUP_PLAYER )
+	end);
 end
 
 function AntiPropSurf.PickupObject(ply, ent)
