@@ -1,7 +1,8 @@
 # Simple Anti Propsurf
 ![alt text](https://raw.githubusercontent.com/Team-Pixel/GmodAntiSurf/master/icon.jpg "Logo")
 
----
+
+
 A simple anti propsurf on Garry's Mod.
 
 ## Convars
@@ -14,6 +15,7 @@ __antipropsurf_admin_prevent__ *Default=1* : 1 to enable the anti propsurf for a
 
 ## Credits
 Code by Elanis - [https://elanis.eu](https://elanis.eu "Elanis' Portfolio")
+
 Logo by Erjiii & Crysalix 
 
 Licensed under MIT License - See LICENSE file.
