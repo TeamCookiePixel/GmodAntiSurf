@@ -1,4 +1,4 @@
-# GmodAntiSurf
+# Simple Anti Propsurf
 ![alt text](https://raw.githubusercontent.com/Team-Pixel/GmodAntiSurf/master/icon.jpg "Logo")
 
 ---
