@@ -3,7 +3,7 @@
 
 
 
-A simple anti propsurf on Garry's Mod.
+A simple and optimized (lag-free) anti propsurf on Garry's Mod.
 
 ## Convars
 
